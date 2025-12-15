@@ -21,7 +21,7 @@ const (
 	Port       = ":8080"
 )
 
-var AuthToken = "AutoFtBot-agskjgdvsbdreiWG1234512SDKrqw"
+var AuthToken = "ramadhan144-agskjgdvsbdreiWG1234512SDKrqw"
 
 type Config struct {
 	Listen string `json:"listen"`
