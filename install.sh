@@ -189,7 +189,7 @@ if [[ -n "$bot_token" ]] && [[ -n "$admin_id" ]]; then
     bot_file="zivpn-bot.go"
   fi
   
-  run_silent "Downloading Bot" "wget -q https://raw.githubusercontent.com/AutoFTbot/ZiVPN/main/$bot_file -O /etc/zivpn/api/$bot_file"
+  run_silent "Downloading Bot" "wget -q https://raw.githubusercontent.com/ramadhan144/ZiVPN/main/$bot_file -O /etc/zivpn/api/$bot_file"
   
   cd /etc/zivpn/api
   run_silent "Downloading Bot Deps" "go get github.com/go-telegram-bot-api/telegram-bot-api/v5"
@@ -238,5 +238,5 @@ echo -e "${BOLD}Installation Complete${RESET}"
 echo -e "Domain  : ${CYAN}$domain${RESET}"
 echo -e "API     : ${CYAN}Port 8080${RESET}"
 echo -e "Token   : ${CYAN}$api_key${RESET}"
-echo -e "Dev     : ${CYAN}https://t.me/AutoFTBot${RESET}"
+echo -e "Dev     : ${CYAN}https://t.me/Ramadhann121${RESET}"
 echo ""
