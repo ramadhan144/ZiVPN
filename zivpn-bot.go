@@ -25,7 +25,7 @@ const (
 	DomainFile    = "/etc/zivpn/domain"
 )
 
-var ApiKey = "AutoFtBot-agskjgdvsbdreiWG1234512SDKrqw"
+var ApiKey = "ramadhan144-agskjgdvsbdreiWG1234512SDKrqw"
 
 type BotConfig struct {
 	BotToken string `json:"bot_token"`
