@@ -375,7 +375,7 @@ func getSystemInfo(w http.ResponseWriter, r *http.Request) {
 		"domain":     domain,
 		"public_ip":  strings.TrimSpace(string(ipPub)),
 		"private_ip": strings.Fields(string(ipPriv))[0],
-		"port":       "5667",
+		"port":       "52272",
 		"service":    "zivpn",
 	}
 
