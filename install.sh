@@ -226,9 +226,9 @@ fi
 run_silent "Starting Services" "systemctl enable zivpn.service && systemctl start zivpn.service && systemctl enable zivpn-api.service && systemctl start zivpn-api.service"
 
 iface=$(ip -4 route ls | grep default | grep -Po '(?<=dev )(\S+)' | head -1)
-iptables -t nat -A PREROUTING -i "$iface" -p udp --dport 6000:19999 -j DNAT --to-destination :5667 &>/dev/null
+iptables -t nat -A PREROUTING -i "$iface" -p udp --dport 6000:19999 -j DNAT --to-destination :52272 &>/dev/null
 ufw allow 6000:19999/udp &>/dev/null
-ufw allow 5667/udp &>/dev/null
+ufw allow 52272/udp &>/dev/null
 ufw allow 8080/tcp &>/dev/null
 
 rm -f "$0" install.tmp install.log &>/dev/null
