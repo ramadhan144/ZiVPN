@@ -36,9 +36,9 @@ echo -e "${GRAY}AutoFTbot Edition${RESET}"
 echo ""
 
 iface=$(ip -4 route ls | grep default | grep -Po '(?<=dev )(\S+)' | head -1)
-run_silent "Cleaning old rules" "iptables -t nat -D PREROUTING -i $iface -p udp --dport 6000:19999 -j DNAT --to-destination :5667 &>/dev/null"
+run_silent "Cleaning old rules" "iptables -t nat -D PREROUTING -i $iface -p udp --dport 6000:19999 -j DNAT --to-destination :52272 &>/dev/null"
 
-run_silent "Applying new rules" "iptables -t nat -A PREROUTING -i $iface -p udp --dport 6000:19999 -j DNAT --to-destination :5667"
+run_silent "Applying new rules" "iptables -t nat -A PREROUTING -i $iface -p udp --dport 6000:19999 -j DNAT --to-destination :52272"
 
 if [ -f /etc/iptables/rules.v4 ]; then
     run_silent "Saving to rules.v4" "iptables-save > /etc/iptables/rules.v4"
